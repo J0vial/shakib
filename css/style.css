@@ -623,3 +623,73 @@ a {
 .letter-spacing {
   letter-spacing: .2rem;
   color: rgba(255, 255, 255, 0.5) !important; }
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5); /* Darker background for better visibility */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Make the buttons round */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5); /* Darker background for better visibility */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Round buttons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: absolute; /* Position the buttons over the carousel */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust vertical centering */
+  z-index: 1; /* Make sure buttons appear over content */
+}
+
+/* Specific positioning */
+.carousel-control-prev {
+  left: -30px; /* Adjust the 'previous' button position */
+}
+
+.carousel-control-next {
+  right: -30px; /* Adjust the 'next' button position */
+}
+
+/* Add hover effect for web (larger screens) */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker on hover for emphasis */
+  transform: scale(1.1); /* Slight enlarge effect */
+}
+
+/* Tap feedback for mobile (smaller screens) */
+.carousel-control-prev:active,
+.carousel-control-next:active {
+  background-color: rgba(0, 0, 0, 0.9); /* Darker background on tap */
+  transform: scale(0.95); /* Slight shrink effect on tap */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 60%; /* Adjust icon size */
+}
+
+/* Adjust size and alignment for smaller screens (mobile) */
+@media (max-width: 767px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    height: 50px; /* Smaller controls for mobile */
+  }
+  .carousel-control-prev {
+    left: -20px; /* Adjust left button on smaller screens */
+  }
+  .carousel-control-next {
+    right: -20px; /* Adjust right button on smaller screens */
+  }
+}
+  
